@@ -1,0 +1,20 @@
+{
+  "ensimmäinen": [{"source":"html","kind":"contains","value":"<h1"},{"source":"html","kind":"count","value":"<p","min":2}],
+  "muotoilu": [{"source":"html","kind":"contains","value":"<strong"},{"source":"html","kind":"contains","value":"<em"}],
+  "listat": [{"source":"html","kind":"contains","value":"<ul"},{"source":"html","kind":"count","value":"<li","min":3}],
+  "linkit": [{"source":"html","kind":"count","value":"<a","min":3}],
+  "kuvat": [{"source":"html","kind":"contains","value":"<img"},{"source":"html","kind":"contains","value":"alt="}],
+  "semanttinen": [{"source":"html","kind":"contains","value":"<header"},{"source":"html","kind":"contains","value":"<main"},{"source":"html","kind":"contains","value":"<footer"}],
+  "cssperusteet": [{"source":"css","kind":"contains","value":"color:"}],
+  "selektorit": [{"source":"css","kind":"regex","value":"\\.[a-z_-]+\\s*\\{"}],
+  "tekstityylit": [{"source":"css","kind":"contains","value":"font-size:"},{"source":"css","kind":"contains","value":"font-weight:"}],
+  "boxmodel": [{"source":"css","kind":"contains","value":"padding:"},{"source":"css","kind":"contains","value":"margin:"}],
+  "taustat": [{"source":"css","kind":"contains","value":"border-radius:"},{"source":"css","kind":"contains","value":"border:"}],
+  "flexbox": [{"source":"css","kind":"contains","value":"display:flex"},{"source":"css","kind":"contains","value":"gap:"}],
+  "flexkaytanto": [{"source":"css","kind":"contains","value":"flex-wrap:wrap"}],
+  "grid": [{"source":"css","kind":"contains","value":"display:grid"},{"source":"css","kind":"contains","value":"grid-template-columns:"}],
+  "responsiivisuus": [{"source":"css","kind":"contains","value":"@media"}],
+  "lomakkeet": [{"source":"html","kind":"contains","value":"<form"},{"source":"html","kind":"contains","value":"<label"},{"source":"html","kind":"contains","value":"<input"}],
+  "hyva": [{"source":"html","kind":"contains","value":"alt="},{"source":"html","kind":"contains","value":"<label"}],
+  "loppuprojekti": [{"source":"html","kind":"contains","value":"<header"},{"source":"html","kind":"contains","value":"<nav"},{"source":"html","kind":"contains","value":"<main"}]
+}

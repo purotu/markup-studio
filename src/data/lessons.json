@@ -1,0 +1,400 @@
+{
+    "ensimmäinen": {
+        "number": "01",
+        "title": "Ensimmäinen HTML-sivu",
+        "short": "HTML:n perusta",
+        "language": "html",
+        "theory": "HTML on verkkosivun rakenne ja sisältö. Aloita dokumentin perusrungosta ja lisää siihen tekstiä merkityksellisillä elementeillä.",
+        "topics": [
+            "Mitä HTML on?",
+            "<html>, <head> ja <body>",
+            "Ensimmäinen teksti sivulle",
+            "Otsikot <h1>–<h3>",
+            "Kappale <p>"
+        ],
+        "exercises": [
+            "Muuta otsikko ja lisää kaksi tekstikappaletta"
+        ],
+        "project": "Minun ensimmäinen verkkosivuni",
+        "example": "<!doctype html>\n<html>\n  <body>\n    <h1>Oma sivu</h1>\n    <p>Tervetuloa!</p>\n  </body>\n</html>",
+        "task": "Muuta editorissa otsikko ja lisää kaksi tekstikappaletta.",
+        "hint": "<h1>Otsikko</h1> ja kaksi <p>-elementtiä"
+    },
+    "muotoilu": {
+        "number": "02",
+        "title": "Tekstin muotoilu ja sisältö",
+        "short": "Korosta tärkeää",
+        "language": "html",
+        "theory": "HTML:n elementit kertovat tekstin tarkoituksen. Vahva painotus, korostus, rivinvaihto ja kommentit auttavat tekemään sisällöstä selkeää.",
+        "topics": [
+            "<strong> ja <em>",
+            "Rivinvaihto ja vaakaviiva",
+            "Kommentit HTML:ssä",
+            "Sisäkkäiset elementit"
+        ],
+        "exercises": [
+            "Korosta tekstistä tärkeät kohdat",
+            "Korjaa väärin sisäkkäiset tagit"
+        ],
+        "project": "Lyhyt esittelysivu",
+        "example": "<p>Tämä on <strong>tärkeää</strong> ja tämä <em>korostettua</em>.</p>\n<hr>\n<!-- Muistiinpano -->",
+        "task": "Lisää tekstiin yksi strong- ja yksi em-elementti.",
+        "hint": "<strong>Tärkeä sana</strong>"
+    },
+    "listat": {
+        "number": "03",
+        "title": "Listat",
+        "short": "Ryhmittele sisältö",
+        "language": "html",
+        "theory": "Listat sopivat asioiden, vaiheiden ja vaihtoehtojen esittämiseen. Valitse numeroimaton lista vapaille kohdille ja numeroitu lista järjestykselle.",
+        "topics": [
+            "Numeroimaton lista <ul>",
+            "Numeroitu lista <ol>",
+            "Listan kohta <li>",
+            "Sisäkkäinen lista"
+        ],
+        "exercises": [
+            "Tee harrastuslista",
+            "Tee vaiheittainen ohje"
+        ],
+        "project": "Top 5 -sivu",
+        "example": "<ul>\n  <li>HTML</li>\n  <li>CSS</li>\n</ul>",
+        "task": "Tee editoriin lista, jossa on kolme omaa harrastusta.",
+        "hint": "<ul><li>Harrastus</li></ul>"
+    },
+    "linkit": {
+        "number": "04",
+        "title": "Linkit",
+        "short": "Liiku sivujen välillä",
+        "language": "html",
+        "theory": "Linkit yhdistävät verkkosivut toisiinsa. href kertoo kohteen ja target voi avata ulkoisen sivun uuteen välilehteen.",
+        "topics": [
+            "<a>",
+            "href",
+            "Linkki toiselle verkkosivulle",
+            "Linkki oman sivuston toiselle sivulle",
+            "target=\"_blank\""
+        ],
+        "exercises": [
+            "Lisää kolme linkkiä"
+        ],
+        "project": "Omat suosikkisivustoni",
+        "example": "<a href=\"https://developer.mozilla.org\">MDN</a>\n<a href=\"/yhteystiedot\">Yhteystiedot</a>",
+        "task": "Lisää sivulle kolme toimivaa linkkiä.",
+        "hint": "<a href=\"osoite\">Teksti</a>"
+    },
+    "kuvat": {
+        "number": "05",
+        "title": "Kuvat",
+        "short": "Lisää sisältöön kuvaa",
+        "language": "html",
+        "theory": "Kuva lisätään img-elementillä. src kertoo tiedoston sijainnin ja alt kuvailee sisällön käyttäjälle, joka ei näe kuvaa.",
+        "topics": [
+            "<img>",
+            "src",
+            "alt",
+            "Kuvan koko",
+            "Kuvapolut"
+        ],
+        "exercises": [
+            "Lisää kuva sivulle",
+            "Korjaa rikkinäinen kuva"
+        ],
+        "project": "Pieni kuvagalleria",
+        "example": "<img src=\"kuva.jpg\" alt=\"Kuva metsästä\">",
+        "task": "Lisää sivulle kuva, jolla on kuvaava alt-teksti.",
+        "hint": "<img src=\"...\" alt=\"...\">"
+    },
+    "semanttinen": {
+        "number": "06",
+        "title": "HTML-sivun rakenne",
+        "short": "Rakenna merkityksellisesti",
+        "language": "html",
+        "theory": "Semanttinen HTML antaa sisällölle merkityksen. Oikeat elementit tekevät sivusta helpomman käyttää, lukea ja kehittää.",
+        "topics": [
+            "<header>",
+            "<nav>",
+            "<main>",
+            "<section>",
+            "<article>",
+            "<footer>",
+            "Miksi semanttista HTML:ää käytetään?"
+        ],
+        "exercises": [
+            "Järjestä elementit oikeaan rakenteeseen"
+        ],
+        "project": "Pienen yrityksen etusivu",
+        "example": "<header>Logo</header>\n<main><section>Sisältö</section></main>\n<footer>Yhteystiedot</footer>",
+        "task": "Järjestä sivusi header-, main- ja footer-osioihin.",
+        "hint": "<header>...</header><main>...</main>"
+    },
+    "cssperusteet": {
+        "number": "07",
+        "title": "CSS:n perusteet",
+        "short": "Anna sivulle tyyliä",
+        "language": "css",
+        "theory": "CSS määrittää, miltä HTML näyttää. Tyylisääntö yhdistää selektorin, ominaisuuden ja arvon.",
+        "topics": [
+            "Mitä CSS tekee?",
+            "style-attribuutti",
+            "<style>",
+            "Erillinen style.css",
+            "Selektori",
+            "Ominaisuus ja arvo"
+        ],
+        "exercises": [
+            "Muuta tekstin väri",
+            "Muuta taustaväri"
+        ],
+        "project": "Tyylittele aikaisempi esittelysivu",
+        "example": "body {\n  background-color: #11130f;\n}\nh1 { color: #d8f566; }",
+        "task": "Muuta h1-otsikon tekstin väriä CSS:llä.",
+        "hint": "h1 { color: väri; }"
+    },
+    "selektorit": {
+        "number": "08",
+        "title": "CSS-selektorit",
+        "short": "Valitse oikeat elementit",
+        "language": "css",
+        "theory": "Selektorit kertovat, mihin elementteihin tyyli kohdistuu. Class sopii yhteiseen tyyliin ja ID yksittäiseen kohteeseen.",
+        "topics": [
+            "Elementtiselektori",
+            "Class",
+            "ID",
+            "Useita luokkia",
+            "Yhdistelmäselektorit perusteiden tasolla"
+        ],
+        "exercises": [
+            "Väritä vain tietyt elementit",
+            "Anna kolmelle kortille yhteinen tyyli"
+        ],
+        "project": "Profiilikortit",
+        "example": ".card {\n  padding: 1rem;\n}\n#hero { color: #d8f566; }",
+        "task": "Tee kolmelle elementille yhteinen class-tyyli.",
+        "hint": ".kortti { ... }"
+    },
+    "tekstityylit": {
+        "number": "09",
+        "title": "Tekstin tyylit",
+        "short": "Säädä luettavuutta",
+        "language": "css",
+        "theory": "Tekstin tyyleillä säädät sivun tunnelmaa ja luettavuutta. Kokeile maltillisesti kokoa, painoa, tasausta ja riviväliä.",
+        "topics": [
+            "color",
+            "font-family",
+            "font-size",
+            "font-weight",
+            "text-align",
+            "line-height"
+        ],
+        "exercises": [
+            "Tee otsikosta näyttävä"
+        ],
+        "project": "Uutisartikkeli",
+        "example": "h1 {\n  font-size: 2rem;\n  line-height: 1.1;\n  text-align: center;\n}",
+        "task": "Tee h1-otsikosta näyttävä fonttikoolla ja painolla.",
+        "hint": "font-size ja font-weight"
+    },
+    "boxmodel": {
+        "number": "10",
+        "title": "Box model",
+        "short": "Ymmärrä laatikot",
+        "language": "css",
+        "theory": "Jokainen HTML-elementti on laatikko. Sen sisältöä ympäröivät padding, border ja margin.",
+        "topics": [
+            "Elementti laatikkona",
+            "width ja height",
+            "padding",
+            "border",
+            "margin",
+            "box-sizing"
+        ],
+        "exercises": [
+            "Muuta laatikon sisä- ja ulkovälejä",
+            "Tunnista margin, padding ja border"
+        ],
+        "project": "Tuotekortti",
+        "example": ".card {\n  padding: 1.5rem;\n  border: 1px solid #65722e;\n  margin: 1rem;\n}",
+        "task": "Muuta kortin sisä- ja ulkovälejä.",
+        "hint": "padding on sisällä, margin ulkona"
+    },
+    "taustat": {
+        "number": "11",
+        "title": "Taustat ja reunat",
+        "short": "Viimeistele pinta",
+        "language": "css",
+        "theory": "Taustat, reunat ja varjot tuovat käyttöliittymään hierarkiaa. Käytä niitä maltillisesti, jotta sisältö säilyy pääosassa.",
+        "topics": [
+            "background-color",
+            "background-image",
+            "border",
+            "border-radius",
+            "box-shadow"
+        ],
+        "exercises": [
+            "Tee kortista tyylikkäämpi"
+        ],
+        "project": "Some-kortti",
+        "example": ".card {\n  border-radius: 1rem;\n  box-shadow: 0 1rem 2rem #0003;\n}",
+        "task": "Lisää kortille pyöristetyt kulmat ja reunus.",
+        "hint": "border-radius ja border"
+    },
+    "flexbox": {
+        "number": "12",
+        "title": "Flexbox – ensimmäinen asettelu",
+        "short": "Asettele rinnakkain",
+        "language": "css",
+        "theory": "Flexbox auttaa asettelemaan elementtejä yhdelle akselille. Aloita display: flex -säännöstä ja säädä suuntaa, tasausta ja väliä.",
+        "topics": [
+            "Miksi Flexbox?",
+            "display: flex",
+            "Vaaka- ja pystysuunta",
+            "justify-content",
+            "align-items",
+            "gap"
+        ],
+        "exercises": [
+            "Aseta kolme laatikkoa vierekkäin",
+            "Keskitä elementti"
+        ],
+        "project": "Navigaatiopalkki",
+        "example": ".nav {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}",
+        "task": "Aseta kolme elementtiä vierekkäin gap-välillä.",
+        "hint": "display: flex; gap: 1rem;"
+    },
+    "flexkaytanto": {
+        "number": "13",
+        "title": "Flexbox käytännössä",
+        "short": "Rakenna korttirivejä",
+        "language": "css",
+        "theory": "Flexboxin wrap ja grow tekevät riveistä joustavia. Niillä rakennat korttirivejä, jotka mukautuvat tilaan.",
+        "topics": [
+            "flex-direction",
+            "flex-wrap",
+            "flex-grow",
+            "Korttirivit"
+        ],
+        "exercises": [
+            "Tee responsiivisesti rivittyvät kortit"
+        ],
+        "project": "Tuotegalleria",
+        "example": ".products {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 1rem;\n}",
+        "task": "Salli korttien rivittyä pienemmällä näytöllä.",
+        "hint": "flex-wrap: wrap;"
+    },
+    "grid": {
+        "number": "14",
+        "title": "CSS Grid",
+        "short": "Rakenna ruudukkoja",
+        "language": "css",
+        "theory": "Grid sopii kaksiulotteisiin asetteluihin. Määritä sarakkeet, toistuva koko ja väli yhdellä selkeällä säännöllä.",
+        "topics": [
+            "Gridin idea",
+            "display: grid",
+            "grid-template-columns",
+            "repeat()",
+            "fr",
+            "gap"
+        ],
+        "exercises": [
+            "Tee 2×2-ruudukko",
+            "Tee kuvagalleria"
+        ],
+        "project": "Portfolio",
+        "example": ".gallery {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 1rem;\n}",
+        "task": "Tee kahden sarakkeen Grid-asettelu.",
+        "hint": "repeat(2, 1fr)"
+    },
+    "responsiivisuus": {
+        "number": "15",
+        "title": "Responsiivisuus",
+        "short": "Toimi kaikilla näytöillä",
+        "language": "css",
+        "theory": "Responsiivinen sivu mukautuu näyttöön. Mobile first, suhteelliset mitat ja media queryt auttavat rakentamaan toimivan kokemuksen.",
+        "topics": [
+            "Mitä responsiivisuus tarkoittaa?",
+            "Viewport",
+            "Prosentit",
+            "max-width",
+            "rem",
+            "Media query",
+            "Mobile first"
+        ],
+        "exercises": [
+            "Vaihda kaksi palstaa yhdeksi"
+        ],
+        "project": "Puhelimella toimiva etusivu",
+        "example": "@media (max-width: 40rem) {\n  .layout { grid-template-columns: 1fr; }\n}",
+        "task": "Vaihda kahden palstan asettelu yhdeksi mobiilissa.",
+        "hint": "@media (max-width: 40rem)"
+    },
+    "lomakkeet": {
+        "number": "16",
+        "title": "Lomakkeet",
+        "short": "Kerää tietoa käyttäjältä",
+        "language": "html",
+        "theory": "Lomakkeet tarvitsevat selkeät labelit ja sopivat input-tyypit. required kertoo, että tieto tarvitaan ennen lähettämistä.",
+        "topics": [
+            "<form>",
+            "<label>",
+            "<input>",
+            "<textarea>",
+            "<button>",
+            "Input-tyypit",
+            "required"
+        ],
+        "exercises": [
+            "Tee yhteystietolomake"
+        ],
+        "project": "Ota yhteyttä -sivu",
+        "example": "<form>\n  <label for=\"email\">Sähköposti</label>\n  <input id=\"email\" type=\"email\" required>\n</form>",
+        "task": "Tee lomake, jossa on nimi, sähköposti ja viesti.",
+        "hint": "<label> ja for/id-pari"
+    },
+    "hyva": {
+        "number": "17",
+        "title": "Hyvä HTML ja CSS",
+        "short": "Tarkista laatu",
+        "language": "html",
+        "theory": "Hyvä koodi on luettavaa, saavutettavaa ja tarkoituksenmukaista. Sisennykset, nimet, alt-tekstit ja kontrasti ovat osa laatua.",
+        "topics": [
+            "Sisennykset",
+            "Selkeät class-nimet",
+            "HTML-validius",
+            "Alt-tekstit",
+            "Labelit lomakkeissa",
+            "Värien kontrasti"
+        ],
+        "exercises": [
+            "Etsi sivusta 5 virhettä",
+            "Siisti huonosti kirjoitettu HTML/CSS"
+        ],
+        "example": "<img src=\"logo.png\" alt=\"Yrityksen logo\">\n<label for=\"name\">Nimi</label>",
+        "task": "Etsi omasta koodistasi yksi saavutettavuusparannus.",
+        "hint": "Tarkista alt, labelit ja kontrasti"
+    },
+    "loppuprojekti": {
+        "number": "18",
+        "title": "Loppuprojekti",
+        "short": "Rakenna oma sivusto",
+        "language": "html",
+        "theory": "Yhdistä kaikki opittu. Suunnittele pieni, selkeä verkkosivusto ja rakenna se vaiheittain alusta valmiiksi.",
+        "topics": [
+            "Etusivu",
+            "Tietoa-sivu",
+            "Palvelut / portfolio",
+            "Yhteystiedot",
+            "Navigaatio",
+            "Kuvat",
+            "Flexbox/Grid",
+            "Responsiivisuus"
+        ],
+        "exercises": [
+            "Tee 3–4 sivun verkkosivusto",
+            "Tarkista sivusto ennen palautusta"
+        ],
+        "example": "<header>\n  <nav>Etusivu · Tietoa · Yhteys</nav>\n</header>",
+        "task": "Suunnittele ja rakenna 3–4 sivun verkkosivusto.",
+        "hint": "Tarkistuslista: rakenne, navigaatio, kuvat, layout ja mobiili"
+    }
+}
