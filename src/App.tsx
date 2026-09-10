@@ -96,6 +96,12 @@ function renderMarkdown(markdown: string) {
   let codeLines: string[] = [];
   let listItems: string[] = [];
   let skippedDocumentTitle = false;
+  const renderCode = (value: string, language: string) => {
+    const normalizedLanguage = language.toLowerCase();
+    return normalizedLanguage === "html" || normalizedLanguage === "css"
+      ? highlightCode(value, normalizedLanguage)
+      : escapeHtml(value);
+  };
   const inline = (value: string) =>
     escapeHtml(value).replace(
       /`([^`]+)`/g,
@@ -114,7 +120,7 @@ function renderMarkdown(markdown: string) {
     if (line.startsWith("```")) {
       if (inCode) {
         output.push(
-          `<pre class="code-surface overflow-x-auto rounded-lg p-5 text-sm leading-7 text-[#f4f2eb]"><code data-language="${codeLanguage}">${escapeHtml(codeLines.join("\n"))}</code></pre>`,
+          `<pre class="code-surface overflow-x-auto rounded-lg p-5 text-sm leading-7 text-[#f4f2eb]"><code data-language="${codeLanguage}">${renderCode(codeLines.join("\n"), codeLanguage)}</code></pre>`,
         );
         inCode = false;
         codeLanguage = "";
@@ -155,7 +161,7 @@ function renderMarkdown(markdown: string) {
   }
   if (inCode)
     output.push(
-      `<pre class="code-surface overflow-x-auto rounded-lg p-5 text-sm leading-7 text-[#f4f2eb]"><code data-language="${codeLanguage}">${escapeHtml(codeLines.join("\n"))}</code></pre>`,
+      `<pre class="code-surface overflow-x-auto rounded-lg p-5 text-sm leading-7 text-[#f4f2eb]"><code data-language="${codeLanguage}">${renderCode(codeLines.join("\n"), codeLanguage)}</code></pre>`,
     );
   flushList();
   return output.join("");
