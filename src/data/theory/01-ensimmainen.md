@@ -6,6 +6,8 @@ HTML kuvaa verkkosivun rakenteen ja sisällön. Selain lukee elementit ylhäält
 
 Dokumentti alkaa yleensä `html`-elementistä. `head` sisältää sivun tekniset tiedot ja `body` käyttäjälle näkyvän sisällön.
 
+Elementti on HTML:n perusyksikkö. Se koostuu aloitustagista, sisällöstä ja lopetustagista.
+
 ```html
 <h1>Oma ensimmäinen otsikko</h1>
 <p>Tämä on ensimmäinen kappale.</p>

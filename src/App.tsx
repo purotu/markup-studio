@@ -17,6 +17,26 @@ const theoryFiles = import.meta.glob("./data/theory/*.md", {
   import: "default",
   eager: true,
 }) as Record<string, string>;
+const theoryFileNames: Record<LessonKey, string> = {
+  ensimmäinen: "01-ensimmainen",
+  muotoilu: "02-muotoilu",
+  listat: "03-listat",
+  linkit: "04-linkit",
+  kuvat: "05-kuvat",
+  semanttinen: "06-semanttinen",
+  cssperusteet: "07-cssperusteet",
+  selektorit: "08-selektorit",
+  tekstityylit: "09-tekstityylit",
+  boxmodel: "10-boxmodel",
+  taustat: "11-taustat",
+  flexbox: "12-flexbox",
+  flexkaytanto: "13-flexkaytanto",
+  grid: "14-grid",
+  responsiivisuus: "15-responsiivisuus",
+  lomakkeet: "16-lomakkeet",
+  hyva: "17-hyva",
+  loppuprojekti: "18-loppuprojekti",
+};
 
 type LessonKey = keyof typeof lessonData;
 type Lesson = {
@@ -75,6 +95,7 @@ function renderMarkdown(markdown: string) {
   let codeLanguage = "";
   let codeLines: string[] = [];
   let listItems: string[] = [];
+  let skippedDocumentTitle = false;
   const inline = (value: string) =>
     escapeHtml(value).replace(
       /`([^`]+)`/g,
@@ -114,10 +135,15 @@ function renderMarkdown(markdown: string) {
       continue;
     }
     flushList();
-    if (line.startsWith("# "))
+    if (line.startsWith("# ")) {
+      if (!skippedDocumentTitle) {
+        skippedDocumentTitle = true;
+        continue;
+      }
       output.push(
         `<h2 class="text-2xl font-semibold text-[#f4f2eb]">${inline(line.slice(2))}</h2>`,
       );
+    }
     else if (line.startsWith("## "))
       output.push(
         `<h3 class="text-xl font-semibold text-[#f4f2eb]">${inline(line.slice(3))}</h3>`,
@@ -507,7 +533,8 @@ function LessonView({
 }) {
   const sourceLesson = lessons[lessonKey];
   const theoryMarkdown =
-    theoryFiles[`./data/theory/${lessonKey}.md`] || sourceLesson.theory;
+    theoryFiles[`./data/theory/${theoryFileNames[lessonKey]}.md`] ||
+    sourceLesson.theory;
   const lesson = {
     ...sourceLesson,
     theory: theoryMarkdown,
